@@ -21,7 +21,7 @@ jobs:
                 issue_reporter=${{ github.event.issue.user }}
 
                 # Add comment
-                gh issue comment $issue_number --body <<EOF
+                gh issue comment $issue_number --body<<EOF
                   Hi $issue_reporter!
 
                   The primary -- and the correct -- way to report an issue to us is via the customer support channel. Send us an email at support@blueshift.com from your work email with all the necessary details that contain step by step instructions on how to reproduce the issue.
