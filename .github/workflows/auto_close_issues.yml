@@ -21,7 +21,7 @@ jobs:
                 issue_reporter=${{ github.actor }}
 
                 # Create a temporary file with comment content
-                echo "Hi $issue_reporter!
+                echo "Hi @$issue_reporter!
 
                 The primary -- and the correct -- way to report an issue to us is via the customer support channel. Send us an email at support@blueshift.com from your work email with all the necessary details that contain step by step instructions on how to reproduce the issue.
 
