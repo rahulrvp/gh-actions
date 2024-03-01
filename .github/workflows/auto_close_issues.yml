@@ -1,4 +1,4 @@
-name: auto-close issues with message
+name: Automatically close issues with a comment
 
 on:
     issues:
@@ -8,9 +8,9 @@ jobs:
     close_issue:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
 
-            - name: Add comment and close
+            - name: Add a comment and close
               run: |
                 # Get issue number
                 issue_number=${{ github.event.issue.number }}
