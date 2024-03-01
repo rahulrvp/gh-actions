@@ -20,7 +20,22 @@ jobs:
                 issue_number=${{ github.event.issue.number }}
 
                 # Add comment
-                gh issue comment --body "This issue is automatically closed. Please refer to [documentation link](your_documentation_link) for further details." $issue_number
+                gh issue comment --body <<EOF
+                Hi There!
+
+                The primary -- and the correct -- way to report an issue to us is via the customer support channel. Send us an email at support@blueshift.com from your work email with all the necessary details that contain step by step instructions on how to reproduce the issue.
+
+                In addition, include the following details based on the nature of the issue.
+
+                - Crash Log (in case of app crash)
+                - Screenshots/Screen Recordings
+                - Device details (Make, OS version etc)
+                - Blueshift Android/iOS SDK version being used
+                - Campaign Name/Link (if available)
+                - Template Name/Link (if available)
+
+                Any extra details that you think would help in repro the issue
+                EOF $issue_number
 
                 # Close issue
                 gh issue close $issue_number
