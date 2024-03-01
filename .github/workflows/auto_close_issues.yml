@@ -37,7 +37,7 @@ jobs:
                 Any extra details that you think would help in repro the issue" > comment.txt
 
                 # Read the file content and pipe it to the command
-                cat comment.txt | gh issue comment $issue_number --body -
+                cat comment.txt | gh issue comment $issue_number --body-file -
 
                 # Close issue
                 gh issue close $issue_number
