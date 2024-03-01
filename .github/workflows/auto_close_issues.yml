@@ -18,7 +18,7 @@ jobs:
               run: |
                 # Get issue number
                 issue_number=${{ github.event.issue.number }}
-                issue_reporter=${{ github.event.issue.user.name }}
+                issue_reporter=${{ github.actor }}
 
                 # Create a temporary file with comment content
                 echo "Hi $issue_reporter!
