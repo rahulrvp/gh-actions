@@ -6,6 +6,8 @@ on:
 
 jobs:
     close_issue:
+        permissions:
+            issues: write
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
